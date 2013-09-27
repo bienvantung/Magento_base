@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config>
+    <global>
+        <models>
+            <smart>
+                <class>Smart_CMS_Model</class>
+            </smart>
+        </models>
+        <events>
+            <adminhtml_cms_page_edit_tab_content_prepare_form>
+                <observers>
+                    <smart_page_edit_tab_content>
+                        <type>singleton</type>
+                        <class>Smart_CMS_Model_Observer</class>
+                        <method>cmsField</method>
+                    </smart_page_edit_tab_content>
+                </observers>
+            </adminhtml_cms_page_edit_tab_content_prepare_form>
+        </events>
+    </global>
+</config>
